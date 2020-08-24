@@ -1,4 +1,4 @@
-# Docker do Samy
+# Docker Ackeley
 
 Ambiente para testes com docker.
 
@@ -18,9 +18,6 @@ Conteudo:
     adminer
     mongo-express
 ```
-
-## Pendente
-    Exemplos com node
 
 ## Instalação
 ``` 
