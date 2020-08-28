@@ -4,6 +4,7 @@ Ambiente para testes com docker.
 
 Conteudo:
 ```
+    php5.4
     php5.6
     php7.0
     php7.1
