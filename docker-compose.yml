@@ -24,14 +24,24 @@ services:
           - site3-php71.local
           - site4-php71.local
     depends_on: 
+          - php5.4
           - php5.6
           - php7.0
           - php7.1
           - php7.2
           - php7.3
           - php7.4
-          - php8.0
 
+  php5.4:
+    build: ./php5.4
+    container_name: php5.4
+    volumes:
+      - ./html:/var/www/html/     
+    depends_on:
+      - redis6.0
+      - mailhog.padrao 
+      - mysql-8
+      - mongo-4
   php5.6:
     build: ./php5.6
     container_name: php5.6
@@ -90,17 +100,6 @@ services:
   php7.4:
     build: ./php7.4
     container_name: php7.4
-    volumes:
-      - ./html:/var/www/html/     
-    depends_on:
-      - redis6.0
-      - mailhog.padrao 
-      - mysql-8
-      - mongo-4
-  
-  php8.0:
-    build: ./php8.0
-    container_name: php8.0
     volumes:
       - ./html:/var/www/html/     
     depends_on:
